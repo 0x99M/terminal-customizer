@@ -29,7 +29,7 @@ export default function FontSelector() {
           className={`w-full px-4 py-3 text-left bg-background border border-input rounded-md shadow-sm hover:bg-accent hover:text-accent-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-colors`}
         >
           <div className="flex items-center justify-between">
-            <div className="font-medium">Select Font</div>
+            <div className="text-sm font-medium">Select Font</div>
             <ChevronDown className="h-4 w-4 text-muted-foreground" />
           </div>
         </button>

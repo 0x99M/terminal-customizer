@@ -1,6 +1,7 @@
 import FontSelector from "./components/font-selector";
 import FontSizeSelector from "./components/font-size-selector";
 import FontWeightSelector from "./components/font-weight-selector";
+import LineSpacingSelector from "./components/line-spacing-selector";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <FontSelector />
           <FontSizeSelector />
           <FontWeightSelector />
+          <LineSpacingSelector />
         </div>
         <div className="col-span-3 flex flex-col items-center justify-center">
           <h2 className="text-xl font-medium">Main Content</h2>

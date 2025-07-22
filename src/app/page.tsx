@@ -5,6 +5,8 @@ import FontSelector from "./components/font-selector";
 import FontSizeSelector from "./components/font-size-selector";
 import FontWeightSelector from "./components/font-weight-selector";
 import LineSpacingSelector from "./components/line-spacing-selector";
+import PromptColorPicker from "./components/prompt-color-picker";
+import PromptSymbolSelector from "./components/prompt-symbol-selector";
 import SelectionBackgroundColorPicker from "./components/selection-background-color-picker";
 import TextColorPicker from "./components/text-color-picker";
 
@@ -22,6 +24,7 @@ export default function Home() {
           <FontWeightSelector />
           <LineSpacingSelector />
           <CursorStyleSelector />
+          <PromptSymbolSelector />
         </div>
         <div className="col-span-3 flex flex-col items-center justify-center">
           <h2 className="text-xl font-medium">Main Content</h2>
@@ -31,6 +34,7 @@ export default function Home() {
           <CursorColorPicker />
           <TextColorPicker />
           <SelectionBackgroundColorPicker />
+          <PromptColorPicker />
         </div>
       </div>
 

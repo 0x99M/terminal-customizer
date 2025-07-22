@@ -40,7 +40,7 @@ export function ColorPicker({ name, value, onChange, }: ColorPickerProps) {
         <Button
           variant={"outline"}
           className={`w-full justify-center items-center text-left font-medium ${!background ? "text-muted-foreground" : ""}`}
-          style={{ backgroundColor: background }}
+          style={{ borderColor: background, borderWidth: 3 }}
         >
           <span>{name}</span>
         </Button>

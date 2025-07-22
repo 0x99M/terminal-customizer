@@ -5,9 +5,9 @@ import TerminalView from "@/components/terminal-view";
 export default function Home() {
   return (
     <TerminalProvider>
-      <div className="h-screen w-screen grid grid-rows-[1fr_7fr_1fr] gap-4 p-8">
-        <div className="bg-gray-100 rounded-lg flex items-center justify-center">
-          <h1 className="text-2xl font-semibold">Header Section</h1>
+      <div className="h-screen w-screen grid grid-rows-[1.5fr_7fr_1fr] gap-4 p-8">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-3xl text-shadow-md">Terminal Customizer</h1>
         </div>
 
         <div className="grid grid-cols-5 gap-4">

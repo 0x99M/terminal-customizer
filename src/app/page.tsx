@@ -1,5 +1,6 @@
 import FontSelector from "./components/font-selector";
 import FontSizeSelector from "./components/font-size-selector";
+import FontWeightSelector from "./components/font-weight-selector";
 
 export default function Home() {
   return (
@@ -9,9 +10,10 @@ export default function Home() {
       </div>
 
       <div className="grid grid-cols-5 gap-4">
-        <div className="flex flex-col items-center justify-start gap-8">
+        <div className="flex flex-col items-center justify-start gap-6">
           <FontSelector />
           <FontSizeSelector />
+          <FontWeightSelector />
         </div>
         <div className="col-span-3 flex flex-col items-center justify-center">
           <h2 className="text-xl font-medium">Main Content</h2>

@@ -1,4 +1,5 @@
 import BackgroundColorPicker from "./components/background-color-picker";
+import BackgroundOpacitySelector from "./components/background-opacity-selector";
 import CursorColorPicker from "./components/cursor-color-picker";
 import CursorStyleSelector from "./components/cursor-style-selector";
 import FontSelector from "./components/font-selector";
@@ -31,6 +32,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center justify-start gap-6">
           <BackgroundColorPicker />
+          <BackgroundOpacitySelector />
           <CursorColorPicker />
           <TextColorPicker />
           <SelectionBackgroundColorPicker />

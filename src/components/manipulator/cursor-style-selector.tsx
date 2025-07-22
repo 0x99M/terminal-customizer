@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { useTerminal } from '@/contexts/terminal-context';
 
 export default function CursorStyleSelector() {
-  const [cursorStyle, setCursorStyle] = useState('block');
+  const { state, updateCursorStyle } = useTerminal();
 
   return (
     <div className="w-full flex justify-between items-center">
@@ -12,8 +12,8 @@ export default function CursorStyleSelector() {
       <ToggleGroup
         type="single"
         variant="outline"
-        value={cursorStyle}
-        onValueChange={(value) => value && setCursorStyle(value)}
+        value={state.cursorStyle}
+        onValueChange={(value) => value && updateCursorStyle(value)}
         className="justify-start"
       >
         <ToggleGroupItem value="block" aria-label="Block cursor" className="font-mono text-sm">

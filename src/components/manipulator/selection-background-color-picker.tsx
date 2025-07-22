@@ -1,17 +1,17 @@
 'use client';
 
-import { useState } from 'react';
 import { ColorPicker } from '@/components/ui/color-picker';
+import { useTerminal } from '@/contexts/terminal-context';
 
 export default function SelectionBackgroundColorPicker() {
-  const [selectionBackgroundColor, setSelectionBackgroundColor] = useState('#0078d4');
+  const { state, updateSelectionBackgroundColor } = useTerminal();
 
   return (
     <div className="w-full flex justify-between items-center">
       <ColorPicker
         name="Selection Background"
-        value={selectionBackgroundColor}
-        onChange={setSelectionBackgroundColor}
+        value={state.selectionBackgroundColor}
+        onChange={updateSelectionBackgroundColor}
       />
     </div>
   );

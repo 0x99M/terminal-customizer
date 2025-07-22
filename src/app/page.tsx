@@ -1,3 +1,5 @@
+import CursorColorPicker from "./components/cursor-color-picker";
+import CursorStyleSelector from "./components/cursor-style-selector";
 import FontSelector from "./components/font-selector";
 import FontSizeSelector from "./components/font-size-selector";
 import FontWeightSelector from "./components/font-weight-selector";
@@ -16,6 +18,8 @@ export default function Home() {
           <FontSizeSelector />
           <FontWeightSelector />
           <LineSpacingSelector />
+          <CursorStyleSelector />
+          <CursorColorPicker />
         </div>
         <div className="col-span-3 flex flex-col items-center justify-center">
           <h2 className="text-xl font-medium">Main Content</h2>

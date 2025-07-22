@@ -1,9 +1,12 @@
+import BackgroundColorPicker from "./components/background-color-picker";
 import CursorColorPicker from "./components/cursor-color-picker";
 import CursorStyleSelector from "./components/cursor-style-selector";
 import FontSelector from "./components/font-selector";
 import FontSizeSelector from "./components/font-size-selector";
 import FontWeightSelector from "./components/font-weight-selector";
 import LineSpacingSelector from "./components/line-spacing-selector";
+import SelectionBackgroundColorPicker from "./components/selection-background-color-picker";
+import TextColorPicker from "./components/text-color-picker";
 
 export default function Home() {
   return (
@@ -19,13 +22,15 @@ export default function Home() {
           <FontWeightSelector />
           <LineSpacingSelector />
           <CursorStyleSelector />
-          <CursorColorPicker />
         </div>
         <div className="col-span-3 flex flex-col items-center justify-center">
           <h2 className="text-xl font-medium">Main Content</h2>
         </div>
-        <div className="bg-blue-100 rounded-lg flex items-center justify-center">
-          <span>Right Sidebar</span>
+        <div className="flex flex-col items-center justify-start gap-6">
+          <BackgroundColorPicker />
+          <CursorColorPicker />
+          <TextColorPicker />
+          <SelectionBackgroundColorPicker />
         </div>
       </div>
 

@@ -1,15 +1,15 @@
-import BackgroundColorPicker from "./components/background-color-picker";
-import BackgroundOpacitySelector from "./components/background-opacity-selector";
-import CursorColorPicker from "./components/cursor-color-picker";
-import CursorStyleSelector from "./components/cursor-style-selector";
-import FontSelector from "./components/font-selector";
-import FontSizeSelector from "./components/font-size-selector";
-import FontWeightSelector from "./components/font-weight-selector";
-import LineSpacingSelector from "./components/line-spacing-selector";
-import PromptColorPicker from "./components/prompt-color-picker";
-import PromptSymbolSelector from "./components/prompt-symbol-selector";
-import SelectionBackgroundColorPicker from "./components/selection-background-color-picker";
-import TextColorPicker from "./components/text-color-picker";
+import BackgroundColorPicker from "../components/manipulator/background-color-picker";
+import BackgroundOpacitySelector from "../components/manipulator/background-opacity-selector";
+import CursorColorPicker from "../components/manipulator/cursor-color-picker";
+import CursorStyleSelector from "../components/manipulator/cursor-style-selector";
+import FontSelector from "../components/manipulator/font-selector";
+import FontSizeSelector from "../components/manipulator/font-size-selector";
+import FontWeightSelector from "../components/manipulator/font-weight-selector";
+import LineSpacingSelector from "../components/manipulator/line-spacing-selector";
+import PromptColorPicker from "../components/manipulator/prompt-color-picker";
+import PromptSymbolSelector from "../components/manipulator/prompt-symbol-selector";
+import SelectionBackgroundColorPicker from "../components/manipulator/selection-background-color-picker";
+import TextColorPicker from "../components/manipulator/text-color-picker";
 
 export default function Home() {
   return (

@@ -1,17 +1,17 @@
 'use client';
 
-import { useState } from 'react';
 import { ColorPicker } from '@/components/ui/color-picker';
+import { useTerminal } from '@/contexts/terminal-context';
 
 export default function PromptColorPicker() {
-  const [promptColor, setPromptColor] = useState('#00ff00');
+  const { state, updatePromptColor } = useTerminal();
 
   return (
     <div className="w-full flex justify-between items-center">
       <ColorPicker
         name="Prompt Color"
-        value={promptColor}
-        onChange={setPromptColor}
+        value={state.promptColor}
+        onChange={updatePromptColor}
       />
     </div>
   );

@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { useTerminal } from '@/contexts/terminal-context';
 
 export default function PromptSymbolSelector() {
-  const [promptSymbol, setPromptSymbol] = useState('❯');
+  const { state, updatePromptSymbol } = useTerminal();
 
   return (
     <div className="w-full flex justify-between items-center">
@@ -12,8 +12,8 @@ export default function PromptSymbolSelector() {
       <ToggleGroup
         type="single"
         variant="outline"
-        value={promptSymbol}
-        onValueChange={(value) => value && setPromptSymbol(value)}
+        value={state.promptSymbol}
+        onValueChange={(value) => value && updatePromptSymbol(value)}
         className="justify-start"
       >
         <ToggleGroupItem value="❯" aria-label="Arrow prompt" className="font-mono text-sm">

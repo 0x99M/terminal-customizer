@@ -1,5 +1,6 @@
 import { TerminalProvider } from "@/contexts/terminal-context";
 import * as Manipulator from "@/components/manipulator";
+import TerminalView from "@/components/terminal-view";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
             <Manipulator.PromptSymbolSelector />
           </div>
           <div className="col-span-3 flex flex-col items-center justify-center">
-            <h2 className="text-xl font-medium">Main Content</h2>
+            <TerminalView />
           </div>
           <div className="flex flex-col items-center justify-start gap-6">
             <Manipulator.BackgroundColorPicker />

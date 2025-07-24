@@ -2,13 +2,17 @@ import { TerminalProvider } from "@/contexts/terminal-context";
 import * as Manipulator from "@/components/manipulator";
 import TerminalView from "@/components/terminal-view";
 import ThemeGeneratorButton from "@/components/theme-generator-button";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
     <TerminalProvider>
-      <div className="h-screen w-screen grid grid-rows-[1fr_7fr_1fr] gap-4 p-8">
+      <div className="h-screen w-screen grid grid-rows-[1.5fr_7fr_1fr] gap-4 p-8 bg-background text-foreground">
         <div className="flex flex-col items-center justify-center gap-4">
-          <ThemeGeneratorButton />
+          <div className="flex items-center gap-4">
+            <ThemeGeneratorButton />
+            <ThemeToggle />
+          </div>
         </div>
 
         <div className="grid grid-cols-5 gap-4">
@@ -33,8 +37,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-gray-100 rounded-lg flex items-center justify-center gap-6">
-          <span className="text-sm text-gray-600">Built with ❤️ for developers</span>
+        <div className="flex items-center justify-center gap-6">
+          <span className="text-sm text-card-foreground">Built with ❤️ for developers</span>
           <div className="flex items-center gap-4">
             <a
               href="https://x.com/0xM99"

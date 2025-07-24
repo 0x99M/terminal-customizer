@@ -68,11 +68,13 @@ export default function TerminalView() {
       `}</style>
 
       <div
-        className="overflow-scroll p-4 rounded-lg border border-gray-300 font-mono"
+        className="overflow-auto p-4 rounded-lg border font-mono flex flex-col"
         style={{
           ...terminalStyle,
           width: '100%',
-          height: '100%',
+          height: '500px',
+          maxWidth: '800px',
+          minWidth: '600px',
         }}
       >
         {/* Terminal Header */}

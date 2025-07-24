@@ -1,13 +1,14 @@
 import { TerminalProvider } from "@/contexts/terminal-context";
 import * as Manipulator from "@/components/manipulator";
 import TerminalView from "@/components/terminal-view";
+import ThemeGeneratorButton from "@/components/theme-generator-button";
 
 export default function Home() {
   return (
     <TerminalProvider>
       <div className="h-screen w-screen grid grid-rows-[1fr_7fr_1fr] gap-4 p-8">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-3xl text-shadow-md">Terminal Customizer</h1>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <ThemeGeneratorButton />
         </div>
 
         <div className="grid grid-cols-5 gap-4">

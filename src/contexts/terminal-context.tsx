@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
+import { coolThemes } from '@/data/themes';
 
 interface TerminalState {
   // Font settings
@@ -8,18 +9,18 @@ interface TerminalState {
   fontSize: number;
   fontWeight: number;
   lineSpacing: number;
-  
+
   // Colors
   backgroundColor: string;
   textColor: string;
   cursorColor: string;
   selectionBackgroundColor: string;
   promptColor: string;
-  
+
   // Cursor and prompt
   cursorStyle: string;
   promptSymbol: string;
-  
+
   // Background
   backgroundOpacity: number;
 }
@@ -38,6 +39,7 @@ interface TerminalContextType {
   updateCursorStyle: (style: string) => void;
   updatePromptSymbol: (symbol: string) => void;
   updateBackgroundOpacity: (opacity: number) => void;
+  generateCoolTheme: () => void;
 }
 
 const TerminalContext = createContext<TerminalContextType | undefined>(undefined);
@@ -49,21 +51,23 @@ export function TerminalProvider({ children }: { children: ReactNode }) {
     fontSize: 14,
     fontWeight: 400,
     lineSpacing: 1.0,
-    
+
     // Colors
     backgroundColor: '#000000',
     textColor: '#ffffff',
     cursorColor: '#ffffff',
     selectionBackgroundColor: '#0078d4',
     promptColor: '#00ff00',
-    
+
     // Cursor and prompt
     cursorStyle: 'block',
     promptSymbol: '❯',
-    
+
     // Background
     backgroundOpacity: 100,
   });
+
+  const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
 
   const updateFont = (font: string) => setState(prev => ({ ...prev, selectedFont: font }));
   const updateFontSize = (size: number) => setState(prev => ({ ...prev, fontSize: size }));
@@ -77,6 +81,15 @@ export function TerminalProvider({ children }: { children: ReactNode }) {
   const updateCursorStyle = (style: string) => setState(prev => ({ ...prev, cursorStyle: style }));
   const updatePromptSymbol = (symbol: string) => setState(prev => ({ ...prev, promptSymbol: symbol }));
   const updateBackgroundOpacity = (opacity: number) => setState(prev => ({ ...prev, backgroundOpacity: opacity }));
+
+  const generateCoolTheme = () => {
+    const selectedTheme = coolThemes[currentThemeIndex];
+    const { name, ...themeWithoutName } = selectedTheme;
+    setState(themeWithoutName);
+
+    // Move to next theme, cycle back to 0 when reaching the end
+    setCurrentThemeIndex((prevIndex) => (prevIndex + 1) % coolThemes.length);
+  };
 
   return (
     <TerminalContext.Provider value={{
@@ -93,6 +106,7 @@ export function TerminalProvider({ children }: { children: ReactNode }) {
       updateCursorStyle,
       updatePromptSymbol,
       updateBackgroundOpacity,
+      generateCoolTheme,
     }}>
       {children}
     </TerminalContext.Provider>

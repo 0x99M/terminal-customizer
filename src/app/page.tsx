@@ -16,7 +16,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-5 gap-4">
-          <div className="flex flex-col items-center justify-start gap-6">
+          <div className="flex flex-col items-center justify-between">
             <Manipulator.FontSelector />
             <Manipulator.FontSizeSelector />
             <Manipulator.FontWeightSelector />
@@ -27,7 +27,7 @@ export default function Home() {
           <div className="col-span-3 flex flex-col items-center justify-center">
             <TerminalView />
           </div>
-          <div className="flex flex-col items-center justify-start gap-6">
+          <div className="flex flex-col items-center justify-between">
             <Manipulator.BackgroundColorPicker />
             <Manipulator.BackgroundOpacitySelector />
             <Manipulator.CursorColorPicker />

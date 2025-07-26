@@ -41,7 +41,7 @@ export default function Home() {
           <span className="text-sm text-card-foreground">Built with ❤️ for developers</span>
           <div className="flex items-center gap-4">
             <a
-              href="https://x.com/0xM99"
+              href="https://x.com/0x99M"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 hover:text-blue-500 transition-colors"
@@ -52,7 +52,7 @@ export default function Home() {
               <span className="text-sm">Follow on X</span>
             </a>
             <a
-              href="https://github.com/ThreeMSEDT"
+              href="https://github.com/0x99M"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"

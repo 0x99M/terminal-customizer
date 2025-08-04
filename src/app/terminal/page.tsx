@@ -1,5 +1,5 @@
 import { TerminalProvider } from "@/contexts/terminal-context";
-import * as Manipulator from "@/components/manipulator";
+import * as Customizers from "@/components/customizers";
 import TerminalView from "@/components/terminal-view";
 import ThemeGeneratorButton from "@/components/theme-generator-button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -17,23 +17,23 @@ export default function TerminalPage() {
 
         <div className="grid grid-cols-5 gap-4">
           <div className="flex flex-col items-center justify-between">
-            <Manipulator.FontSelector />
-            <Manipulator.FontSizeSelector />
-            <Manipulator.FontWeightSelector />
-            <Manipulator.LineSpacingSelector />
-            <Manipulator.CursorStyleSelector />
-            <Manipulator.PromptSymbolSelector />
+            <Customizers.FontSelector />
+            <Customizers.FontSizeSelector />
+            <Customizers.FontWeightSelector />
+            <Customizers.LineSpacingSelector />
+            <Customizers.CursorStyleSelector />
+            <Customizers.PromptSymbolSelector />
           </div>
           <div className="col-span-3 flex flex-col items-center justify-center">
             <TerminalView />
           </div>
           <div className="flex flex-col items-center justify-between">
-            <Manipulator.BackgroundColorPicker />
-            <Manipulator.BackgroundOpacitySelector />
-            <Manipulator.CursorColorPicker />
-            <Manipulator.TextColorPicker />
-            <Manipulator.SelectionBackgroundColorPicker />
-            <Manipulator.PromptColorPicker />
+            <Customizers.BackgroundColorPicker />
+            <Customizers.BackgroundOpacitySelector />
+            <Customizers.CursorColorPicker />
+            <Customizers.TextColorPicker />
+            <Customizers.SelectionBackgroundColorPicker />
+            <Customizers.PromptColorPicker />
           </div>
         </div>
 

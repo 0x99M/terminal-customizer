@@ -27,7 +27,7 @@ export default function LandingPage() {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
             Create beautiful terminal themes with live preview. Choose from 20+ pre-made themes or customize every detail to match your style.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               href="/terminal"
@@ -60,7 +60,7 @@ export default function LandingPage() {
                 See your changes instantly with our real-time terminal preview
               </p>
             </div>
-            
+
             <div className="text-center p-6 rounded-lg bg-card border">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-6 h-6 text-white" />
@@ -70,7 +70,7 @@ export default function LandingPage() {
                 Choose from professionally designed themes or create your own
               </p>
             </div>
-            
+
             <div className="text-center p-6 rounded-lg bg-card border">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Terminal className="w-6 h-6 text-white" />

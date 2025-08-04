@@ -8,21 +8,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useTerminal } from '@/contexts/terminal-context';
-
-const FONTS = [
-  'Inter',
-  'Roboto',
-  'Open Sans',
-  'Lato',
-  'Montserrat',
-  'Poppins',
-  'Source Sans Pro',
-  'Playfair Display',
-  'Merriweather',
-  'Lora',
-  'Fira Code',
-  'JetBrains Mono',
-];
+import { FONTS } from '@/data/fonts';
 
 export default function FontSelector() {
   const { state, updateFont } = useTerminal();
